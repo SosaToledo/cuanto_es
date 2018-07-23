@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <!--
+        Opción de diseño:
+            pasar el linearlayout de arriaba a un Relative,
+            los 3 primero elementos insertarlos en un linear y ponerlos en top,
+            a los ultimos dos en otro linear darles buttom, y al recycler ponerlo en
+            "debajo de". no creo que cambie mucho pero es una opcion. puto.
+    -->
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Ingrese_el_nombre"
+        />
+    <EditText
+        android:id="@+id/etMonto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Ingrese_el_monto"
+        android:ems="10"
+        android:inputType="number"
+        />
+    <Button
+        android:id="@+id/btnAgregar"
+        android:onClick="agregar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar"/>
+    <!--Espacio para ListViwe-->
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reciclador"
+        />
+    <!--Fin Espacio para ListViwe-->
+    <EditText
+        android:id="@+id/etCantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Ingrese_la_cantidad"
+        android:ems="10"
+        android:inputType="number"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:onClick="Calcular"/>
+
+</LinearLayout>
