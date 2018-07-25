@@ -5,4 +5,5 @@
     <string name="Ingrese_la_cantidad">Ingrese el total de participantes</string>
     <string name="calcular">Calcular</string>
     <string name="agregar">Agregar</string>
+    <string name="logo_splash_screen">Logo splash screen</string>
 </resources>
