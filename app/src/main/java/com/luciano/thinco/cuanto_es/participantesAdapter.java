@@ -23,7 +23,7 @@ public class participantesAdapter extends RecyclerView.Adapter<participantesAdap
     @Override
     public void onBindViewHolder(@NonNull participantesViewHolder participantesViewHolder, int i) {
         participantesViewHolder.nombre.setText(participantesList.get(i).getNombre());
-        participantesViewHolder.monto.setText(String.valueOf(participantesList.get(i).getMonto()));
+        participantesViewHolder.monto.setText("$"+String.valueOf(participantesList.get(i).getMonto()));
     }
 
     @Override

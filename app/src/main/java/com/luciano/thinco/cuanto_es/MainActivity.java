@@ -41,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Obtener el Recycler
         recycler = (RecyclerView) findViewById(R.id.reciclador);
-        recycler.setHasFixedSize(true);
+        recycler.setHasFixedSize(false);
 
         // Usar un administrador para LinearLayout
-        lManager = new GridLayoutManager(this, 2);
+        lManager = new GridLayoutManager(this,2);
         recycler.setLayoutManager(lManager);
 
         // Crear un nuevo adaptador
@@ -56,14 +56,14 @@ public class MainActivity extends AppCompatActivity {
         if(etNombre.getText().toString().length()==0 || etMonto.getText().toString().length()==0){
             Toast.makeText(this,"Falto el monto o el nombre.", Toast.LENGTH_SHORT).show();
         }else{
-            participante = new participantes(etNombre.getText().toString(), Integer.valueOf(etMonto.getText().toString()));
+            participante = new participantes(etNombre.getText().toString().trim(), Integer.valueOf(etMonto.getText().toString()));
             if (!participantes.contains(participante)){
                 participantes.add(participante);
                 etMonto.setText("");
                 etNombre.setText("");
                 adapter.notifyDataSetChanged();
             } else{
-                Toast.makeText(this, " Cambie el nombre del participante", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Cambie el nombre del participante", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
             }
             if (size==1){
                 dialog.setTitle("Ah pero vos sos loco");
+//                estas cosas tienen que ser lleno de calidad Thinco
                 dialog.setMessage("Poné uno mas, por favor.");
             }
             dialog.setCancelable(true);
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(DialogInterface dialog, int which) {}
             });
         }else{
-            dialog.setTitle("Las cuentas se divien así");
+            dialog.setTitle("Las cuentas se dividen así");
             dialog.setMessage("");
         }
         dialog.show();

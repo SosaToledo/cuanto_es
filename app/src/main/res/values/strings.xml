@@ -3,4 +3,6 @@
     <string name="Ingrese_el_nombre">Ingrese el nombre</string>
     <string name="Ingrese_el_monto">Ingrese el monto</string>
     <string name="Ingrese_la_cantidad">Ingrese el total de participantes</string>
+    <string name="calcular">Calcular</string>
+    <string name="agregar">Agregar</string>
 </resources>
