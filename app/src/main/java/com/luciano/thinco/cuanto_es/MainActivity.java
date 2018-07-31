@@ -7,7 +7,11 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -23,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText etNombre;
     private EditText etMonto;
     private EditText etCantidad;
+    private Button btnCalcular;
     private RecyclerView recycler;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager lManager;
@@ -38,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         etNombre = (EditText) findViewById(R.id.etNombre);
         etMonto = (EditText) findViewById(R.id.etMonto);
         etCantidad = (EditText) findViewById(R.id.etCantidad);
+        btnCalcular = (Button) findViewById(R.id.btnCalcular);
         participantes = new ArrayList<participantes>();
 
         // Obtener el Recycler
@@ -72,32 +78,19 @@ public class MainActivity extends AppCompatActivity {
     public void Calcular(View view) {
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         int size = participantes.size();
-        if (size<2){
-            if (size==0){
-                dialog.setTitle("Vos tenes problemitas");
-                dialog.setMessage("Ingresa al menos dos personas");
-            }
-            if (size==1){
-                dialog.setTitle("Ah pero vos sos loco");
-//                estas cosas tienen que ser lleno de calidad Thinco
-                dialog.setMessage("Poné uno mas, por favor.");
-            }
-            dialog.setCancelable(true);
-            dialog.setPositiveButton("Esta bien", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {}
-            });
+        if (etCantidad.getText().toString().equals("")) {
+            dialog.setTitle("El campo de participantes esta vacio");
+            dialog.setMessage("No se puede dividir por 0, matemática de primaria");
         }else{
-            dialog.setTitle("Las cuentas se dividen así");
-            dialog.setMessage("");
+            float cant = Float.valueOf(etCantidad.getText().toString());
+            if (size > cant){
+                dialog.setTitle("la cantidad de participantes es poca");
+                dialog.setMessage("debe ser mayor o igual a "+size);
+            }else{
+                dialog.setTitle("la cuenta se divide así");
+                dialog.setMessage("");
+            }
         }
         dialog.show();
-    }
-
-    public participantes mayor(List<participantes> p){
-        //Perdon ya me maree yo tmb
-        com.luciano.thinco.cuanto_es.participantes pMayorMonto = new participantes(p.get(0).getNombre(), p.get(0).getMonto());
-
-        return pMayorMonto;
     }
 }

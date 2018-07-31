@@ -145,7 +145,7 @@
 
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnCalcular"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
