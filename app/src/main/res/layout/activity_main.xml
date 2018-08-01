@@ -16,14 +16,6 @@
         android:focusableInTouchMode="true"
         tools:context=".MainActivity">
 
-
-        <!--
-            Opción de diseño:
-                pasar el linearlayout de arriaba a un Relative,
-                los 3 primero elementos insertarlos en un linear y ponerlos en top,
-                a los ultimos dos en otro linear darles buttom, y al recycler ponerlo en
-                "debajo de". no creo que cambie mucho pero es una opcion. puto.
-        -->
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"

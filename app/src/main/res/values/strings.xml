@@ -6,4 +6,5 @@
     <string name="calcular">Calcular</string>
     <string name="agregar">Agregar</string>
     <string name="logo_splash_screen">Logo splash screen</string>
+    <string name="eliminar">Para eliminar un elemento mantenga presionado</string>
 </resources>
