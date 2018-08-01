@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 etMonto.setText("");
                 etNombre.setText("");
                 adapter.notifyDataSetChanged();
+                etNombre.requestFocus();
             } else{
                 Toast.makeText(this, "Cambie el nombre del participante", Toast.LENGTH_SHORT).show();
             }

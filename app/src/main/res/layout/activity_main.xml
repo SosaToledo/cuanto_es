@@ -14,16 +14,10 @@
         android:background="@color/colorSecondaryLight"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        android:paddingBottom="16dp"
+        >
 
-
-        <!--
-            Opción de diseño:
-                pasar el linearlayout de arriaba a un Relative,
-                los 3 primero elementos insertarlos en un linear y ponerlos en top,
-                a los ultimos dos en otro linear darles buttom, y al recycler ponerlo en
-                "debajo de". no creo que cambie mucho pero es una opcion. puto.
-        -->
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
@@ -88,8 +82,8 @@
 
         <Button
             android:id="@+id/btnAgregar"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            android:layout_width="294dp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="93dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
@@ -111,7 +105,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginStart="16dp"
-            android:minHeight="50dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -147,18 +141,27 @@
         <Button
             android:id="@+id/btnCalcular"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="0dp"
+            android:layout_width="195dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
             android:layout_marginLeft="32dp"
             android:layout_marginRight="32dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_button"
+
+            android:drawablePadding="5dp"
+            android:drawableBottom="@drawable/dollarsymbol"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+
             android:onClick="Calcular"
             android:text="@string/calcular"
+            android:textColor="#ffff"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/til_cantidad" />
+            app:layout_constraintTop_toBottomOf="@+id/til_cantidad"
+            />
 
     </android.support.constraint.ConstraintLayout>
 

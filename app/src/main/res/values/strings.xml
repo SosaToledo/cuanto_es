@@ -3,7 +3,8 @@
     <string name="Ingrese_el_nombre">Ingrese el nombre</string>
     <string name="Ingrese_el_monto">Ingrese el monto</string>
     <string name="Ingrese_la_cantidad">Ingrese el total de participantes</string>
-    <string name="calcular">Calcular</string>
+    <string name="calcular">Calcular el total</string>
     <string name="agregar">Agregar</string>
     <string name="logo_splash_screen">Logo splash screen</string>
+    <string name="las_cuentas_se_dividen_asi">Las cuentas se dividen asi</string>
 </resources>
