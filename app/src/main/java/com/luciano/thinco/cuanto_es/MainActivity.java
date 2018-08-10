@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
             float cant = Float.valueOf(etCantidad.getText().toString());
             if (size > cant ) {
                 tvTitulo.setText(R.string.pocos_participantes);
-                tvQuienPusoMas.setText(getString(R.string.tamano_minimo) + size);
+                tvQuienPusoMas.setText(getString(R.string.tamano_minimo) +" "+ size);
                 tvDeudores.setText("");
                 tvSobrante.setText("");
             } else {

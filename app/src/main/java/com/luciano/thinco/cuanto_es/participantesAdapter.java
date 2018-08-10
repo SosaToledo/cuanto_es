@@ -1,11 +1,14 @@
 package com.luciano.thinco.cuanto_es;
 
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -49,22 +52,37 @@ public class participantesAdapter extends RecyclerView.Adapter<participantesAdap
 
         @Override
         public boolean onLongClick(final View V) {
-            final android.app.AlertDialog.Builder dialogConfirmacion = new android.app.AlertDialog.Builder(V.getContext());
-            dialogConfirmacion.setTitle("Eliminar a "+nombre.getText().toString());
-            dialogConfirmacion.setCancelable(true);
-            dialogConfirmacion.setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    listener.itemLongClick(V, getAdapterPosition());
-                }
-            });
-            dialogConfirmacion.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
 
+            AlertDialog.Builder builder = new AlertDialog.Builder(V.getContext()).setCancelable(false);
+
+            LayoutInflater inflater = ((Activity)V.getContext()).getLayoutInflater();
+
+            View v = inflater.inflate(R.layout.dialog_eliminar, null);
+
+            builder.setView(v);
+
+//            aca se realizan las llamadas al findviewbyid
+            TextView tvTitulo = v.findViewById(R.id.tvPersonaAEliminar);
+            Button btnCerrarDialog = v.findViewById(R.id.btnCancelarDialog);
+            Button btnEliminarDialog = v.findViewById(R.id.btnEliminarDialog);
+
+            tvTitulo.setText("Eliminar a "+nombre.getText().toString());
+
+            final AlertDialog d = builder.create();
+            btnCerrarDialog.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    d.dismiss();
                 }
             });
-            dialogConfirmacion.show();
+            btnEliminarDialog.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    listener.itemLongClick(V, getAdapterPosition());
+                    d.dismiss();
+                }
+            });
+            d.show();
             return true;
         }
     }

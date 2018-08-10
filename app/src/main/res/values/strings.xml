@@ -10,6 +10,9 @@
     <string name="el_campo_esta_vacio">El campo de participantes esta vacio </string>
     <string name="no_podes_dividir_por_cero">No se puede dividir por 0, matemática de primaria </string>
     <string name="pocos_participantes">La cantidad de participantes es poca </string>
-    <string name="tamano_minimo">Debe ser mayor o igual a  </string>
+    <string name="tamano_minimo">Debe ser mayor o igual a</string>
     <string name="terminar">Terminar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="queres_eliminar_a_frank">¿Queres eliminar a Frank ?</string>
 </resources>
