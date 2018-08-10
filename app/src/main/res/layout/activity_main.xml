@@ -14,6 +14,7 @@
         android:background="@color/colorSecondaryLight"
         android:focusable="true"
         android:focusableInTouchMode="true"
+        android:paddingBottom="16dp"
         tools:context=".MainActivity">
 
 
@@ -36,7 +37,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logoapp" />
+            app:srcCompat="@drawable/idea128" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/til_nombre"
@@ -88,7 +89,7 @@
 
         <Button
             android:id="@+id/btnAgregar"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="294dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -144,21 +145,25 @@
         </android.support.design.widget.TextInputLayout>
 
 
-        <Button
+        <ImageButton
             android:id="@+id/btnCalcular"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:layout_marginEnd="32dp"
             android:layout_marginLeft="32dp"
             android:layout_marginRight="32dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
-            android:onClick="Calcular"
-            android:text="@string/calcular"
+            android:layout_marginBottom="16dp"
+            android:scaleType="fitCenter"
+            android:padding="15dp"
+            android:tint="@color/colorSecondaryLight"
+            android:src="@drawable/people_trading_64"
+            android:background="@drawable/rounded_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/til_cantidad" />
+            app:layout_constraintTop_toBottomOf="@+id/til_cantidad"
+            />
 
     </android.support.constraint.ConstraintLayout>
 

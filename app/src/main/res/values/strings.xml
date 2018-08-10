@@ -1,9 +1,15 @@
 <resources>
     <string name="app_name">¿Cúanto es?</string>
-    <string name="Ingrese_el_nombre">Ingrese el nombre</string>
-    <string name="Ingrese_el_monto">Ingrese el monto</string>
-    <string name="Ingrese_la_cantidad">Ingrese el total de participantes</string>
+    <string name="Ingrese_el_nombre">Ingrese el nombre </string>
+    <string name="Ingrese_el_monto">Ingrese el monto </string>
+    <string name="Ingrese_la_cantidad">Ingrese el total de participantes </string>
     <string name="calcular">Calcular</string>
     <string name="agregar">Agregar</string>
-    <string name="logo_splash_screen">Logo splash screen</string>
+    <string name="logo_splash_screen">Logo splash screen </string>
+    <string name="las_cuentas_se_dividen_asi">Las cuentas se dividen asi </string>
+    <string name="el_campo_esta_vacio">El campo de participantes esta vacio </string>
+    <string name="no_podes_dividir_por_cero">No se puede dividir por 0, matemática de primaria </string>
+    <string name="pocos_participantes">La cantidad de participantes es poca </string>
+    <string name="tamano_minimo">Debe ser mayor o igual a  </string>
+    <string name="terminar">Terminar</string>
 </resources>
