@@ -1,10 +1,32 @@
 <resources>
-    <string name="app_name">¿Cúanto es?</string>
-    <string name="Ingrese_el_nombre">Ingrese el nombre</string>
-    <string name="Ingrese_el_monto">Ingrese el monto</string>
-    <string name="Ingrese_la_cantidad">Ingrese el total de participantes</string>
-    <string name="calcular">Calcular el total</string>
+    <string name="app_name">¿Cuánto es?</string>
+    <string name="Ingrese_el_nombre">Ingrese el nombre </string>
+    <string name="Ingrese_el_monto">Ingrese el monto </string>
+    <string name="Ingrese_la_cantidad">Ingrese el total de participantes </string>
+    <string name="calcular">Calcular</string>
     <string name="agregar">Agregar</string>
-    <string name="logo_splash_screen">Logo splash screen</string>
-    <string name="las_cuentas_se_dividen_asi">Las cuentas se dividen asi</string>
+    <string name="logo_splash_screen">Logo splash screen </string>
+    <string name="las_cuentas_se_dividen_asi">Las cuentas se dividen así  </string>
+    <string name="el_campo_esta_vacio">El campo de participantes está vacío </string>
+    <string name="no_podes_dividir_por_cero">No se puede dividir por 0, matemática de primaria </string>
+    <string name="pocos_participantes">La cantidad de participantes es poca </string>
+    <string name="tamano_minimo">Debe ser mayor o igual a</string>
+    <string name="terminar">Terminar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="queres_eliminar_a_frank">¿Queres eliminar a Frank ?</string>
+    <string name="resultado1eraparte">La persona que más dinero puso fue\u0020</string>
+    <string name="resultado2daparte">, tiene que recibir: $</string>
+    <string name="resultado3eraparte">\u0020cuando todos los que deben dinero aporten su parte.</string>
+    <string name="negativo1eraparte">Estas personas deben darle dinero a\u0020</string>
+    <string name="positivo1eraparte">Estas personas van a recibir de\u0020</string>
+    <string name="simboloLista">൭\u0020</string>
+    <string name="positivo2daparte">\u0020debe recibir $</string>
+    <string name="negativo2daparte">\u0020debe poner $</string>
+    <string name="entendido">Entendido</string>
+    <string name="tutorial01">Esta es una app para dividir los gastos en las reuniones entre amigos</string>
+    <string name="tutorial02">Ingresa el nombre y cuánto gastó cada uno en estos campos</string>
+    <string name="tutorial03">Antes de terminar ingresa el total de las personas que van a pagar</string>
+    <string name="tutorial04">Al final presiona en este botón  y listo</string>
+
 </resources>
