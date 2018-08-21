@@ -17,6 +17,21 @@
         android:paddingBottom="16dp"
         tools:context=".MainActivity">
 
+        <Button
+            android:id="@+id/btnTutorial"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_button"
+            android:onClick="tutorial"
+            android:text="@string/signo_pregunta"
+            android:textColor="@color/colorSecondaryLight"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="150dp"
@@ -30,6 +45,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logoapp" />
+
+
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/til_nombre"
@@ -150,8 +167,8 @@
             android:layout_marginBottom="16dp"
             android:scaleType="fitCenter"
             android:padding="15dp"
-            android:tint="@color/colorSecondaryLight"
             android:src="@drawable/people_trading_128"
+            android:tint="@color/colorSecondaryLight"
             android:background="@drawable/rounded_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

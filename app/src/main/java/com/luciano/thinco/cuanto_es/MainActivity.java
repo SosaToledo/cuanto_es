@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
     private participantes participante;
     private String TAG = "debug";
     private boolean sePuedeBorrar = false;
-    private FancyShowCaseView v1,v2,v3,v4;
+    private FancyShowCaseView v1,v2,v3,v4,v5;
+    private Button btnTutorial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         etMonto = (EditText) findViewById(R.id.etMonto);
         etCantidad = (EditText) findViewById(R.id.etCantidad);
         btnCalcular = findViewById(R.id.btnCalcular);
+        btnTutorial = findViewById(R.id.btnTutorial);
         participantes = new ArrayList<participantes>();
 
         // Obtener el Recycler
@@ -154,8 +156,26 @@ public class MainActivity extends AppCompatActivity {
                 .showOnce("fancy04")
                 .closeOnTouch(false)
                 .build();
+        v5 = new FancyShowCaseView.Builder(this)
+                .focusOn(btnTutorial)
+                .customView(R.layout.custom_tutorial, new OnViewInflateListener() {
+                    @Override
+                    public void onViewInflated(View view) {
+                        TextView tv= (TextView) view.findViewById(R.id.cuerpo);
+                        tv.setText(R.string.tutorial05);
+                        view.findViewById(R.id.closebutton).setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                v5.hide();
+                            }
+                        });
+                    }
+                })
+                .showOnce("fancy05")
+                .closeOnTouch(false)
+                .build();
 
-        new FancyShowCaseQueue().add(v1).add(v2).add(v3).add(v4).show();
+        new FancyShowCaseQueue().add(v1).add(v2).add(v3).add(v4).add(v5).show();
 
     }
 
@@ -284,5 +304,86 @@ public class MainActivity extends AppCompatActivity {
         });
         d.show();
 
+    }
+
+    public void tutorial(View view) {
+
+
+        v1 = new FancyShowCaseView.Builder(this)
+                .customView(R.layout.custom_tutorial, new OnViewInflateListener() {
+                    @Override
+                    public void onViewInflated(View view) {
+                        TextView tv= (TextView) view.findViewById(R.id.cuerpo);
+                        tv.setText(R.string.tutorial01);
+                        view.findViewById(R.id.closebutton).setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                v1.hide();
+                            }
+                        });
+                    }
+                })
+                .closeOnTouch(false)
+                .build();
+        v2 = new FancyShowCaseView.Builder(this)
+                .focusOn(etNombre)
+                .focusShape(FocusShape.ROUNDED_RECTANGLE)
+                .roundRectRadius(90)
+                .customView(R.layout.custom_tutorial, new OnViewInflateListener() {
+                    @Override
+                    public void onViewInflated(View view) {
+                        TextView tv= (TextView) view.findViewById(R.id.cuerpo);
+                        tv.setText(R.string.tutorial02);
+                        view.findViewById(R.id.closebutton).setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                v2.hide();
+                            }
+                        });
+                    }
+                })
+                .closeOnTouch(false)
+                .build();
+        v3 = new FancyShowCaseView.Builder(this)
+                .focusOn(etCantidad)
+                .focusShape(FocusShape.ROUNDED_RECTANGLE)
+                .roundRectRadius(90)
+                .customView(R.layout.custom_tutorial, new OnViewInflateListener() {
+                    @Override
+                    public void onViewInflated(View view) {
+                        TextView tv= (TextView) view.findViewById(R.id.cuerpo);
+                        tv.setText(R.string.tutorial03);
+                        view.findViewById(R.id.closebutton).setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                v3.hide();
+                            }
+                        });
+                    }
+                })
+                .closeOnTouch(false)
+                .build();
+        v4 = new FancyShowCaseView.Builder(this)
+                .focusOn(btnCalcular)
+                .customView(R.layout.custom_tutorial, new OnViewInflateListener() {
+                    @Override
+                    public void onViewInflated(View view) {
+                        TextView tv= (TextView) view.findViewById(R.id.cuerpo);
+                        tv.setText(R.string.tutorial04);
+                        view.findViewById(R.id.closebutton).setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                v4.hide();
+                            }
+                        });
+                    }
+                })
+                .closeOnTouch(false)
+                .build();
+
+        new FancyShowCaseQueue().add(v1).add(v2).add(v3).add(v4).show();
+
+
+//        Toast.makeText(this, "Iniciado tuto", Toast.LENGTH_SHORT).show();
     }
 }

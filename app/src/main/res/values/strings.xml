@@ -28,5 +28,7 @@
     <string name="tutorial02">Ingresa el nombre y cuánto gastó cada uno en estos campos</string>
     <string name="tutorial03">Antes de terminar ingresa el total de las personas que van a pagar</string>
     <string name="tutorial04">Al final presiona en este botón  y listo</string>
+    <string name="tutorial05">\n \n Para volver a ver este tutorial, presiona en el signo de pregunta</string>
+    <string name="signo_pregunta">\?</string>
 
 </resources>
